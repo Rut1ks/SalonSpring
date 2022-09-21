@@ -15,7 +15,7 @@ import java.util.Optional;
 
 @Controller
 @RequestMapping("/admin")
-//@PreAuthorize("hasAnyAuthority('ADMIN')")
+@PreAuthorize("hasAnyAuthority('ADMIN')")
 public class UserController {
 
 

@@ -17,7 +17,7 @@
     <div th:if="${#fields.hasErrors('naimenovanieSalona')}" th:errors="*{naimenovanieSalona}"></div>
     </p>
     <p>Кол-во мест
-        <input th:field="*{kolVoMest}" type="text"  id="kolVoMest" name="kolVoMest" placeholder="Кол-во мест"><br>
+        <input th:field="*{kolVoMest}" type="number"  id="kolVoMest" name="kolVoMest" placeholder="Кол-во мест"><br>
     <div th:if="${#fields.hasErrors('kolVoMest')}" th:errors="*{kolVoMest}"></div>
     </p>
     <p>Время работы

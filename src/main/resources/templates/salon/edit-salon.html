@@ -19,7 +19,7 @@
         <div th:if="${#fields.hasErrors('ploshyad')}" th:errors="*{ploshyad}"></div>
         </p>
         <p>Количество мест
-            <input th:field="*{kolVoMest}" type="text" style="background-color: chocolate" th:value="${el.kolVoMest}" id="kolVoMest" name="kolVoMest" placeholder="Кол-во мест"><br>
+            <input th:field="*{kolVoMest}" type="number" style="background-color: chocolate" th:value="${el.kolVoMest}" id="kolVoMest" name="kolVoMest" placeholder="Кол-во мест"><br>
         <div th:if="${#fields.hasErrors('kolVoMest')}" th:errors="*{kolVoMest}"></div>
         </p>
         <p>Веремя работы
@@ -32,7 +32,7 @@
                 <option th:text="${element.adresSalona}"></option>
             </div>
         </select>
-        <input type="submit" value="Изменить тип услуги" class="btn btn-success"><br>
+        <input type="submit" value="Изменить салон" class="btn btn-success"><br>
         <a href="/salon/" class="btn btn-primary">Назад к салонам</a>
     </form><br>
 </div>

@@ -2,6 +2,8 @@ package com.example.Salon.models;
 
 
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import java.text.DecimalFormat;
 import java.util.Collection;
 
@@ -10,7 +12,9 @@ public class Doljnosti {
     @Id
     @GeneratedValue
     private Long id;
+    @NotEmpty(message = "Поле не может быть пустым")
     private String namePost;
+    @NotNull(message = "Поле не может быть пустым")
     private Integer postPrice;
 
     @OneToMany(mappedBy = "Doljnost",fetch = FetchType.EAGER)

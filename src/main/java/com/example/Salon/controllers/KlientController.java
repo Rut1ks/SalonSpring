@@ -4,6 +4,7 @@ package com.example.Salon.controllers;
 import com.example.Salon.models.*;
 import com.example.Salon.repositories.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -17,6 +18,7 @@ import java.util.Optional;
 
 @Controller
 @RequestMapping("/klient")
+@PreAuthorize("hasAnyAuthority('EMPLOYEE','ADMIN')")
 public class KlientController {
 
 

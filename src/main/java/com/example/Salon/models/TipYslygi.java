@@ -1,6 +1,7 @@
 package com.example.Salon.models;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
 import java.util.Collection;
 
 @Entity
@@ -8,6 +9,7 @@ public class TipYslygi {
     @Id
     @GeneratedValue
     private Long id;
+    @NotEmpty(message = "Поле не может быть пустым")
     private String tipYslygi;
     @OneToMany(mappedBy = "tipYslygi",fetch = FetchType.EAGER)
     private Collection<Yslygi> yslygiCollection;

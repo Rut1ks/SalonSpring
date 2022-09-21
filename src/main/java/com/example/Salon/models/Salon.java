@@ -2,6 +2,8 @@ package com.example.Salon.models;
 
 
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import java.util.Collection;
 
 @Entity
@@ -9,9 +11,13 @@ public class Salon {
     @Id
     @GeneratedValue
     private Long id;
+    @NotEmpty(message = "Поле не может быть пустым")
     private String naimenovanieSalona;
+    @NotEmpty(message = "Поле не может быть пустым")
     private String ploshyad;
+    @NotNull(message = "Поле не может быть пустым")
     private Integer kolVoMest;
+    @NotEmpty(message = "Поле не может быть пустым")
     private String vremyaRaboti;
     @OneToOne(cascade = CascadeType.DETACH,optional = true)
     private AdresSalona AdresSalona;

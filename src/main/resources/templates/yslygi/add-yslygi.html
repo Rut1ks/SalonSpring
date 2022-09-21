@@ -13,7 +13,7 @@
     <div th:if="${#fields.hasErrors('nameYslygi')}" th:errors="*{nameYslygi}"></div>
     </p>
     <p>Стоимость
-        <input th:field="*{costYslygi}" type="text"  id="costYslygi" name="costYslygi" placeholder="Название"><br>
+        <input th:field="*{costYslygi}" type="number"  id="costYslygi" name="costYslygi" placeholder="Название"><br>
     <div th:if="${#fields.hasErrors('costYslygi')}" th:errors="*{costYslygi}"></div>
     </p>
     <p>Время проведения

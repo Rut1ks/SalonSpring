@@ -2,6 +2,7 @@ package com.example.Salon.models;
 
 
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
 import java.util.Collection;
 
 @Entity
@@ -9,6 +10,7 @@ public class Sklad {
     @Id
     @GeneratedValue
     private Long id;
+    @NotEmpty(message = "Поле не может быть пустым")
     private String adresSklada;
     @OneToMany(mappedBy = "adressSklada",fetch = FetchType.EAGER)
     private Collection<Nabori> naboriCollection;

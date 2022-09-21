@@ -2,6 +2,7 @@ package com.example.Salon.models;
 
 
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
 import java.util.Collection;
 
 @Entity
@@ -9,9 +10,13 @@ public class Klient {
     @Id
     @GeneratedValue
     private Long id;
+    @NotEmpty(message = "Поле не может быть пустым")
     private String surename;
+    @NotEmpty(message = "Поле не может быть пустым")
     private String name;
+    @NotEmpty(message = "Поле не может быть пустым")
     private String middlename;
+    @NotEmpty(message = "Поле не может быть пустым")
     private String numberphone;
 
     @OneToMany(mappedBy = "Klient",fetch = FetchType.EAGER)

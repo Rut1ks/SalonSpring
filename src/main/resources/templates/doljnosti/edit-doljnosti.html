@@ -15,7 +15,7 @@
         <div th:if="${#fields.hasErrors('namePost')}" th:errors="*{namePost}"></div>
         </p>
         <p>Оклад
-            <input th:field="*{postPrice}" type="text" style="background-color: chocolate" th:value="${el.postPrice}" id="postPrice" name="postPrice" placeholder="Название"><br>
+            <input th:field="*{postPrice}" type="number" style="background-color: chocolate" th:value="${el.postPrice}" id="postPrice" name="postPrice" placeholder="Название"><br>
         <div th:if="${#fields.hasErrors('postPrice')}" th:errors="*{postPrice}"></div>
         </p>
         <input type="submit" value="Изменить должность" class="btn btn-success"><br>

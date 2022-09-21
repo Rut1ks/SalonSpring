@@ -6,6 +6,7 @@ import com.example.Salon.models.Sklad;
 import com.example.Salon.models.TipYslygi;
 import com.example.Salon.repositories.DoljnostiRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -19,6 +20,7 @@ import java.util.Optional;
 
 @Controller
 @RequestMapping("/doljnosti")
+@PreAuthorize("hasAnyAuthority('ADMIN')")
 public class DoljnostiController {
 
 

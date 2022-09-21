@@ -1,6 +1,8 @@
 package com.example.Salon.models;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import java.text.DecimalFormat;
 import java.util.Collection;
 
@@ -9,8 +11,11 @@ public class Yslygi {
     @Id
     @GeneratedValue
     private Long id;
+    @NotEmpty(message = "Поле не может быть пустым")
     private String nameYslygi;
+    @NotNull(message = "Поле не может быть пустым")
     private Integer costYslygi;
+    @NotEmpty(message = "Поле не может быть пустым")
     private String timeOfEvent;
 
     @ManyToOne(optional = true,cascade = CascadeType.DETACH)

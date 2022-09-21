@@ -2,17 +2,24 @@ package com.example.Salon.models;
 
 
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
 
 @Entity
 public class Sotrydniki {
     @Id
     @GeneratedValue
     private Long id;
+    @NotEmpty(message = "Поле не может быть пустым")
     private String surename;
+    @NotEmpty(message = "Поле не может быть пустым")
     private String name;
+    @NotEmpty(message = "Поле не может быть пустым")
     private String middlename;
+    @NotEmpty(message = "Поле не может быть пустым")
     private String bornDate;
+    @NotEmpty(message = "Поле не может быть пустым")
     private String adressEmployee;
+    @NotEmpty(message = "Поле не может быть пустым")
     private String numberphone;
 
     @ManyToOne(optional = true,cascade = CascadeType.DETACH)

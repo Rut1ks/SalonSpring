@@ -15,7 +15,7 @@
         <div th:if="${#fields.hasErrors('nameYslygi')}" th:errors="*{nameYslygi}"></div>
         </p>
         <p>Стоимость
-            <input th:field="*{costYslygi}" type="text" style="background-color: chocolate" th:value="${el.costYslygi}" id="costYslygi" name="costYslygi" placeholder="Название"><br>
+            <input th:field="*{costYslygi}" type="number" style="background-color: chocolate" th:value="${el.costYslygi}" id="costYslygi" name="costYslygi" placeholder="Название"><br>
         <div th:if="${#fields.hasErrors('costYslygi')}" th:errors="*{costYslygi}"></div>
         </p>
         <p>Время проведения
@@ -32,7 +32,7 @@
                 <option th:text="${element.tipYslygi}"></option>
             </div>
         </select>
-        <input type="submit" value="Изменить тип услуги" class="btn btn-success"><br>
+        <input type="submit" value="Изменить услугу" class="btn btn-success"><br>
         <a href="/yslygi/" class="btn btn-primary">Назад к услугам</a>
     </form><br>
 </div>
